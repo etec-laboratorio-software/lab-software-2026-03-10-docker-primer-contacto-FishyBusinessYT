@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend:/app
+      # Prevents the host from overwriting the container's venv
+      - /app/.venv
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      # Prevents the host from overwriting the container's node_modules
+      - /app/node_modules
+    depends_on:
+      - backend
