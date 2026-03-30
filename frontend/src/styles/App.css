@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  background: #6E65C6;
+  padding: 2rem;
+}
+
+.app-main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
