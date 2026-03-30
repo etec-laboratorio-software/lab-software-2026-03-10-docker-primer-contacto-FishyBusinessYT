@@ -15,33 +15,19 @@ Utopia Creature Collection es una herramienta diseñada para almacenar y acceder
     ```bash
     git clone git@github.com:etec-programacion-3/programacion-3-2025-gonzalezc-FishyBusinessYT.git ./ucc
     ```
-2) Ingresar a la carpeta `frontend` y ejecutar `npm install`:
+2) Crear imagenes de docker
     ```bash
-    cd ./ucc/frontend
-    npm install
-    ```
-3) Ingresar a la carpeta `backend`, crear un venv e instalar librerías:
-    ```bash
-    cd ../backend
-    uv sync
+    cd ucc
+    docker compose build
     ```
 
 ## Uso
-Hace falta tener dos terminales abiertas; Una para cada servidor.
-### Levantar el backend
-Ingresar a la carpeta `backend` en una terminal y ejecutar:
+### Iniciar app
 ```bash
-cd ./ucc/backend
-uv run app.py
-```
-### Levantar el frontend
-Ingresar a la carpeta `frontend` en otra terminal y ejecutar:
-```bash
-cd ./ucc/frontend
-npm run dev
+cd ucc
+docker compose up
 ```
 ### Conectarse
 Una vez estén corriendo ambos servidores, el frontend de la aplicación estará disponible en la dirección [http://localhost:5173](http://localhost:5173)
-
 ### Detener el programa
-Todo se guarda automáticamente, así que es seguro cerrar cada servidor con `Ctrl-C`
+Todo se guarda automáticamente, así que es seguro detener la app con `Ctrl-C`

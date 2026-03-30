@@ -1,5 +1,5 @@
 FROM python:3.13
-RUN pip install uv --root-user-action
+RUN pip install uv --root-user-action ignore
 WORKDIR /app
 COPY pyproject.toml uv.lock ./
 RUN uv sync
